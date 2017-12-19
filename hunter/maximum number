@@ -1,0 +1,32 @@
+#include<stdio.h>
+int high(int b[10],int c);
+int main(void)
+{
+	int i,n,a[10],b[10],c;
+	printf("enter number");
+	scanf("%d",&n);
+	for(i=0;i<=n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	int res;
+	res=high(a,n);
+	
+	printf("%d",res);
+	return 0;
+}
+	int high(int b[10],int c)
+	{
+	int max,i;
+	max=b[0];
+	for(i=0;i<=c;i++)
+	
+	{
+		if(b[i]>max)
+		{
+			max=b[i];
+
+		}
+	}
+	return max;
+            }
