@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main(void)
+{
+	int h1,m1,m2,h2,res,t1,t2,c,d;
+	scanf("%d",&h1);
+	scanf("%d",&m1);
+	scanf("%d",&h2);
+	scanf("%d",&m2);
+	printf("\n%d:%d",h1,m1);
+	printf("\n%d:%d",h2,m2);
+	t1=(h1*60)+m1;
+	t2=(h2*60)+m2;
+	if(t2>t1)
+	{
+		res=t2-t1;
+		printf("\n%d",res);
+	}
+	else
+	{
+		res=t1-t2;
+		printf("\n%d",res);
+	}
+	c=res/60;
+	d=res%60;
+	printf("\n%d:%d",c,d);
+	return 0;
+	
+	}
