@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+int main(void)
+{
+	char a[10];
+	int temp,i,j,count,b;
+	scanf("%s",a);
+	b=strlen(a);
+	for(i=0;i<b;i++)
+	{
+		count=1;
+		temp=a[i];
+		if((a[i]>=65&&a[i]<=96)||(a[i]>=97&&a[i]<=122))
+		{
+			for(j=i+1;j<b;j++)
+			{
+				if(temp==a[j])
+				{
+					count++;
+					if(count>1)
+					{
+						a[j]='*';
+					}
+				}
+			}
+		printf("%c-%d\n",a[i],count);
+		}
+	}
+	return 0;
+}
